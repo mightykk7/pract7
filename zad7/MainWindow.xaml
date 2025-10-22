@@ -1,0 +1,65 @@
+﻿<Window x:Class="zad7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zad7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Имя" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Name}" Height="20" Width="200" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Фамилия" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding LastName}" Height="20" Width="200" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Отчество" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding MiddleName}" Height="20" Width="200" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Специальность" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Specialisation}" Height="20" Width="200" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal">
+                <Label Content="Пароль" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Password}" Height="20" Width="200" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <Button>Зарегистрироваться</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Имя" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Name}" Height="20" Width="200" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal">
+                <Label Content="Пароль" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Password}" Height="20" Width="200" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <Button>Войти</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <Label Content="Имя" HorizontalAlignment="Left"/>
+            <Label Content="Фамилия" HorizontalAlignment="Left"/>
+            <Label Content="Отчество" HorizontalAlignment="Left"/>
+            <Label Content="Специальность" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Background="LightGray">
+            <Label Content="Количество пользователей и пациентов в системе: " HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</Window>
